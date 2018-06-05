@@ -46,7 +46,11 @@
                 <input type="email" class="form-control" id="email">
               </div>
 
-            
+              <div class="form-group">
+                <label for="age">Unique ID</label>
+                <input type="email" class="form-control" id="unique-id">
+              </div>
+
 
             </form>
             <br>
@@ -64,15 +68,15 @@
     // Question: What does this code do?
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
-      var newCharacter = {
+      var newReservation = {
         name: $("#name").val().trim(),
-        role: $("#role").val().trim(),
-        age: $("#age").val().trim(),
-        forcePoints: $("#force-points").val().trim()
+        role: $("#phone").val().trim(),
+        age: $("#email").val().trim(),
+        unique_id: $("#unique-id").val().trim()
       };
 
       // Question: What does this code do??
-      $.post("/api/characters", newCharacter)
+      $.post("/api/characters", newReservation)
         .then(function(data) {
           console.log("tables.html", data);
           alert("Adding reservation...");
