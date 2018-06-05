@@ -63,13 +63,14 @@ app.post("/api/tables", function (req, res) {
     // This works because of our body-parser middleware
     var newReservation = req.body;
 
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newReservation.unique_id = newcharacter.name.replace(/\s+/g, "").toLowerCase();
 
     console.log(newReservation);
 
-    reservations.push(newReservation);
+    if (reservations.length >= 5) {
+       waitlist.push(newReservation); 
+    } else {
+        reservations.push(newReservation)
+    };
 
     res.json(newReservation);
 });
