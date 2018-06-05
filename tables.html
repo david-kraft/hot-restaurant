@@ -83,7 +83,101 @@
   </div>
   </div>
 
+  <script type="text/javascript">
+    $.get("/api/tables/" + newReservation, function (data) {
+      $("#entryOne")
+        .text(" | Name: ")
+        .text(data[0].name)
+        .text(" | Phone Number: ")
+        .text(data[0].phone_number)
+        .text(" | Email: ")
+        .text(data[0].email)
+        .text(" | ID: ")
+        .text(data[0].unique_id);
+      $("#entryTwo")
+        .text(" | Name: ")
+        .text(data[1].name)
+        .text(" | Phone Number: ")
+        .text(data[1].phone_number)
+        .text(" | Email: ")
+        .text(data[1].email)
+        .text(" | ID: ")
+        .text(data[1].unique_id);
+      $("#entryThree")
+        .text(" | Name: ")
+        .text(data[2].name)
+        .text(" | Phone Number: ")
+        .text(data[2].phone_number)
+        .text(" | Email: ")
+        .text(data[2].email)
+        .text(" | ID: ")
+        .text(data[2].unique_id);
+      $("#entryFour")
+        .text(" | Name: ")
+        .text(data[3].name)
+        .text(" | Phone Number: ")
+        .text(data[3].phone_number)
+        .text(" | Email: ")
+        .text(data[3].email)
+        .text(" | ID: ")
+        .text(data[3].unique_id);
+      $("#entryFive")
+        .text(" | Name: ")
+        .text(data[4].name)
+        .text(" | Phone Number: ")
+        .text(data[4].phone_number)
+        .text(" | Email: ")
+        .text(data[4].email)
+        .text(" | ID: ")
+        .text(data[4].unique_id);
+      $("#entrySix")
+        .text(" | Name: ")
+        .text(data[5].name)
+        .text(" | Phone Number: ")
+        .text(data[5].phone_number)
+        .text(" | Email: ")
+        .text(data[5].email)
+        .text(" | ID: ")
+        .text(data[5].unique_id);
+      $("#entrySeven")
+        .text(" | Name: ")
+        .text(data[6].name)
+        .text(" | Phone Number: ")
+        .text(data[6].phone_number)
+        .text(" | Email: ")
+        .text(data[6].email)
+        .text(" | ID: ")
+        .text(data[6].unique_id);
+      $("#entryEight")
+        .text(" | Name: ")
+        .text(data[7].name)
+        .text(" | Phone Number: ")
+        .text(data[7].phone_number)
+        .text(" | Email: ")
+        .text(data[7].email)
+        .text(" | ID: ")
+        .text(data[7].unique_id);
+      $("#entryNine")
+        .text(" | Name: ")
+        .text(data[8].name)
+        .text(" | Phone Number: ")
+        .text(data[8].phone_number)
+        .text(" | Email: ")
+        .text(data[8].email)
+        .text(" | ID: ")
+        .text(data[8].unique_id);
+      $("#entryTen")
+        .text(" | Name: ")
+        .text(data[9].name)
+        .text(" | Phone Number: ")
+        .text(data[9].phone_number)
+        .text(" | Email: ")
+        .text(data[9].email)
+        .text(" | ID: ")
+        .text(data[9].unique_id);
 
+    });
+  </script>
 
 </body>
 
