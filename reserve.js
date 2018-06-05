@@ -25,20 +25,22 @@ var reservations = [
     }
 ];
 
+var waitlist = []
+
 
 // Routes 
-// ============================================================
+// =========================================================
 
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 });
 
-app.get("/reserve", function (req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
+app.get("/reservation", function (req, res) {
+    res.sendFile(path.join(__dirname, "reservation.html"));
 });
 
 
@@ -50,7 +52,7 @@ app.get("/api/tables", function (req, res) {
 
 // Displays wait list in API
 app.get("/api/waitlist", function (req, res) {
-    return res.json(reservations);
+    return res.json(waitlist);
 });
 
 
